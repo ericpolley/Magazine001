@@ -1,0 +1,86 @@
+body {
+    background-image: url("images/workspace-1280538_1920.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+/* this box contains all the text boxes. in the future, i'd like to name them properly. */
+.box1 {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    margin: auto;
+    margin-left: 100px;
+    min-height: 95%;
+}
+/* the large image top right */
+.box2 {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    width: 80%;
+    margin: 45px;
+    border: 5px solid black;
+}
+/* all the boxes below the large image to the top right */
+.box3 {
+     /* grid-column and grid-row, places the item inside of the grid at the 
+    (column left to right) (row top to bottom) */
+    grid-column: 2;
+    grid-row: 3 ;
+    overflow: hidden;
+    border: 5px solid black;
+    
+}
+/* this box contains an image gallery. great for linking multiple images or pages. */
+.box5 {
+    /* grid-column and grid-row, places the item inside of the grid at the 
+    (column left to right) (row top to bottom) */
+    grid-column: 2;
+    grid-row: 4 ;
+    width: auto;
+    height: auto;
+}
+/* this is the grid layout for the image gallery */
+.box5box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr 1fr 1fr;
+    align-items: stretch;
+    border: 5px solid black;
+}
+/* the "footer" at the bottom. */
+.box7 {
+     /* grid-column 1 / -1 fills slots from 1 from the left to -1 from the right, filling up one full layer*/
+    grid-column: 1 / -1;
+    /* grid row 5, set the item to be 5th from the top. */
+    grid-row: 5 ;
+}
+/* change all the boxes with text, to have a background, and a min height so it takes up the proper amount of space. */
+.box1, .box4, .box6, .box7 {
+    background-color: rgba(112, 69, 33, 0.5);
+    min-height: 95%;
+}
+/* this class ensures all the boxes stay in there designated area. and does not grow outside of that area */
+.boxes {
+
+    max-width: 95%;
+    max-height: 95%;
+
+    margin: auto;
+    text-align: center; 
+    overflow-clip-margin: stretch;
+}
+/* this will lay out of the page. the main grid */
+.magazinelayout {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 250px;
+    grid-auto-columns: 200px;
+   
+}
+/* set image size for flucuation */
+.image2 {
+    max-height: 100%;
+    max-width: 100%;
+    min-width: 50%;
+}
